@@ -4,13 +4,10 @@
 #include <random>
 #include <vector>
 
-int kargerMinCut(const Graph &graph)
+int kargerMinCut(const Graph &graph, std::mt19937 &rng)
 {
     DSU dsu(graph.n);
     int components = graph.n;
-
-    std::random_device rd;
-    std::mt19937 rng(rd());
 
     while (components > 2)
     {

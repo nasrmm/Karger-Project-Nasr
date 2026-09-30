@@ -1,6 +1,8 @@
 #pragma once
 
-#include <vector>
+#include <random>
+
+int kargerMinCut(const Graph &graph, std::mt19937 &rng);
 
 struct Edge
 {
