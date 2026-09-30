@@ -13,3 +13,5 @@ struct Graph
     int n;
     std::vector<Edge> edges;
 };
+
+int kargerMinCut(const Graph &graph);

@@ -1,6 +1,5 @@
 #include <iostream>
 #include "karger.h"
-#include "dsu.h"
 
 int main()
 {
@@ -12,8 +11,9 @@ int main()
         {1, 2},
         {2, 0}};
 
-    std::cout << "Vertices: " << triangle.n << '\n';
-    std::cout << "Edges: " << triangle.edges.size() << '\n';
+    std::cout << "Karger min cut: "
+              << kargerMinCut(triangle)
+              << '\n';
 
     return 0;
 }
