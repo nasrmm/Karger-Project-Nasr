@@ -24,6 +24,7 @@ public:
         {
             parent[x] = find(parent[x]);
         }
+
         return parent[x];
     }
 
