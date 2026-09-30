@@ -43,3 +43,32 @@ int kargerMinCut(const Graph &graph, std::mt19937 &rng)
 
     return cutSize;
 }
+
+Graph makeCycle(int n)
+{
+    Graph graph;
+    graph.n = n;
+
+    for (int i = 0; i < n; ++i)
+    {
+        graph.edges.push_back({i, (i + 1) % n});
+    }
+
+    return graph;
+}
+
+Graph makeCompleteGraph(int n)
+{
+    Graph graph;
+    graph.n = n;
+
+    for (int u = 0; u < n; ++u)
+    {
+        for (int v = u + 1; v < n; ++v)
+        {
+            graph.edges.push_back({u, v});
+        }
+    }
+
+    return graph;
+}

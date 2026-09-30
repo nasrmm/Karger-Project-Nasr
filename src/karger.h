@@ -16,3 +16,6 @@ struct Graph
 };
 
 int kargerMinCut(const Graph &graph, std::mt19937 &rng);
+
+Graph makeCycle(int n);
+Graph makeCompleteGraph(int n);
