@@ -1,5 +1,6 @@
 #include <iostream>
 #include "karger.h"
+#include "dsu.h"
 
 int main()
 {
